@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronRight, ChevronDown, FileText, Calendar, 
   Building2, Phone, Mail, Info, Download, 
-  AlertTriangle, ArrowRight, ExternalLink, Printer 
+  AlertTriangle, ArrowRight, ExternalLink
 } from 'lucide-react';
 
 // --- DATA CONTENT START ---
@@ -138,54 +138,6 @@ const generateAnomaliesExcel = () => {
   downloadFile(content, "Segnalazione_Anomalie_BDZ.xls", 'application/vnd.ms-excel');
 };
 
-const generateFullCircularWord = () => {
-  const content = `
-    <div class="brand">BDZ Studio Associato</div>
-    <p style="text-align: right;">${CIRCULAR_INFO.date}</p>
-    <div class="main-title">${CIRCULAR_INFO.title}</div>
-    <p><strong>${CIRCULAR_INFO.recipient}</strong></p>
-
-    <h1>INTRODUZIONE</h1>
-    <p>Dopo aver registrato le ultime operazioni relative al 31/12 e prima di procedere alle scritture di assestamento, è necessario provvedere al controllo dei conti movimentati nell'esercizio.</p>
-    <p>La quadratura formale del bilancio è il prerequisito per la correttezza sostanziale. Eventuali errori possono portare a sanzioni, errata rappresentazione dell'utile e difficoltà nell'accesso al credito.</p>
-
-    <h1>A. OPERAZIONI ANTERIORI</h1>
-    <h2>CASSA</h2>
-    <p>Il conto cassa dovrà avere SEMPRE un saldo nella sezione DARE. Non è possibile che risulti un saldo negativo.</p>
-    <div class="note-box"><strong>Attenzione:</strong> Il limite all'utilizzo del contante è fissato a 5.000€.</div>
-
-    <h2>BANCA</h2>
-    <p>Occorre verificare la registrazione degli interessi e procedere alla riconciliazione tra saldo contabile ed estratto conto.</p>
-
-    <h2>CLIENTI E FORNITORI</h2>
-    <p>Il totale dell'elenco clienti/fornitori deve conciliare con il saldo contabile di bilancio.</p>
-
-    <h1>B. SCRITTURE DI ASSESTAMENTO</h1>
-    <p>Per determinare l'esercizio di competenza, i costi e ricavi devono essere imputati indipendentemente dalla data finanziaria.</p>
-    
-    <h2>PASSAGGIO DI PROPRIETÀ (INCOTERMS)</h2>
-    <table>
-      <tr><th>Termine</th><th>Descrizione</th><th>Passaggio Proprietà</th></tr>
-      <tr><td>EXW</td><td>Franco Fabbrica</td><td>Uscita dalla fabbrica</td></tr>
-      <tr><td>FOB</td><td>Franco a bordo</td><td>Imbarco nave</td></tr>
-      <tr><td>CIF</td><td>Cost Insurance Freight</td><td>Porto destinazione</td></tr>
-      <tr><td>DDP</td><td>Reso Sdoganato</td><td>Consegna cliente</td></tr>
-    </table>
-
-    <h1>C. INVENTARIO MAGAZZINO</h1>
-    <p>Le rimanenze al 31/12 devono essere valorizzate al costo di acquisto o al valore di realizzo (se minore). Vanno distinte in: Materie Prime, Sussidiarie, Consumo, Merci, Semilavorati, Prodotti Finiti.</p>
-
-    <h1>D. MODIFICHE E VARIE</h1>
-    <p><strong>Immobilizzazioni:</strong> Sono capitalizzabili solo i costi per l'acquisto o la costruzione di nuovi cespiti, o per l'incremento significativo della capacità.</p>
-    <p><strong>Crediti:</strong> Le perdite su crediti sono deducibili fiscalmente solo se risultano da elementi certi e precisi.</p>
-
-    <div class="footer">
-      <p>Studio Associato BDZ - Viale A. Palladio, 42 - Verona<br/>Documento generato da Circolattiva</p>
-    </div>
-  `;
-  
-  downloadFile(content, "Circolare_Bilancio_2026_BDZ.doc", 'application/msword');
-};
 
 // --- INTERACTIVE COMPONENTS ---
 
